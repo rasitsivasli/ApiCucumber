@@ -12,6 +12,7 @@ public class CreateUserBySeleniumStepDefinitions {
     CLAddUserPage clAddUserPage = new CLAddUserPage();
     CLContactsPage clContactsPage = new CLContactsPage();
     public static String email;
+    public static String password;
 
     @Given("user goes to {string}")
     public void user_goes_to(String url) {
@@ -42,7 +43,8 @@ public class CreateUserBySeleniumStepDefinitions {
 
     @When("user enters password")
     public void user_enters_password() {
-        clAddUserPage.password.sendKeys("Password.123");
+        password = Faker.instance().internet().password();// Athentication icin kullanilacak password ataniyor
+        clAddUserPage.password.sendKeys(password);
     }
 
     @When("user clicks on submit button")

@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
                 "pretty",//prints colored logs to the console
                 "html:target/reports/default-cucumber-reports.html",//plugin used to generate reports in html format
         },
-        features = "src/test/resources/features",
+        features = "src/test/resources/",
         glue = {"stepdefinitions","base_urls"},// java code larinin calisacagi package lar.
-        tags = "@End2End",
+        tags = "@Contact",
         dryRun = false // test calismasi icin false dememiz gerekiyor.
                        // True dendigi zaman test calismaz,sadece eksik definitionlar verir.
 

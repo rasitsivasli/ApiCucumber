@@ -41,7 +41,8 @@ public class GetUserByApiStepDefinitions {
 
     @When("send the get request and get the response")
     public void send_the_get_request_and_get_the_response() {
-        response = given(spec).get("{first}/{second}");
+        response = given(spec)
+                .get("{first}/{second}");
         response.prettyPrint();
     }
 
